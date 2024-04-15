@@ -1,0 +1,26 @@
+from tkinter import *
+f=Tk();
+
+
+f.title("Form");
+#f.geometry("300x300");
+
+e1=Entry(f).grid(row=0,sticky=W);
+
+var1=IntVar();
+check1=Checkbutton(f,text='male',variable=var1).grid(row=1,sticky=W)
+
+Lb = Listbox(f)
+Lb.insert(1, 'Python')
+Lb.insert(2, 'Java')
+Lb.insert(3, 'C++')
+Lb.insert(4, 'Any other')
+Lb.grid(row=2,sticky=W)
+
+v = IntVar()
+Radiobutton(f, text='MALE', variable=v, value=1).grid(row=3,column=0,sticky=W)
+Radiobutton(f, text='FEMALE', variable=v, value=2).grid(row=3,column=1,sticky=W)
+
+submit=Button(f,text="Submit",width=25, command=f.destroy).grid(row=5);
+
+f.mainloop();
